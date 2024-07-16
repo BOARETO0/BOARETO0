@@ -1,4 +1,3 @@
-# %%
 import win32com.client
 import time
 import pandas as pd
@@ -24,7 +23,6 @@ import locale
 from datetime import date, timedelta
 import os
 
-# %%
 locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8') 
 
 mes = {
@@ -43,8 +41,6 @@ mes = {
 }
 
 
-
-# %%
 def expedidas_apollo(mes_relatorio):
         hoje = str(date.today())
         ip_local = socket.gethostbyname(socket.gethostname())
@@ -93,7 +89,7 @@ def expedidas_apollo(mes_relatorio):
             binary_file.write(message)
             arquivo = fr'os.path.join(caminho_arquivo, f"{mes_caminho}.xlsx'
 
-# %%
+
 meses_ordenados = list(mes.keys())
 mes_atual = date.today().strftime("%B").lower()
 mes_atual_index = meses_ordenados.index(mes_atual)
