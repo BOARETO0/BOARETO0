@@ -1,4 +1,3 @@
-# %%
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -22,7 +21,7 @@ import numpy as np
 from datetime import datetime
 from workalendar.america import Brazil
 
-# %%
+
 links_baldes = {
     'romaneio_maual': 'a', 
     'aguard_agendamento': 'b'
@@ -55,7 +54,7 @@ valor_minimo = 400
 data_hoje = datetime.now().strftime("%d-%m-%Y")
 
 
-# %%
+
 def aguardar_download_completo(pasta_downloads, timeout=300):
 
     caminho_arquivo_especifico = os.path.join(pasta_downloads, "ListaPedidosCompleto.xls")
@@ -281,7 +280,6 @@ def enviar_email(resumo):
         print(f"Erro ao enviar e-mail: {e}")
         return False
 
-# %%
 atualizar_relatorios()
 unificar_relatorios('aguard_agendamento','romaneio_manual')
 resumo = formatar_relatorio_final()
